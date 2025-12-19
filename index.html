@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TecnoBoinas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dc2626, #facc15);
+    }
+
+    header, footer {
+      text-align: center;
+      color: white;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    button {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b91c1c;
+    }
+
+    .pix {
+      background: white;
+      margin: 30px auto;
+      max-width: 600px;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>TecnoBoinas</h1>
+  <p>Boinas profissionais para polimento automotivo — direto da fábrica</p>
+</header>
+
+<section class="produtos">
+  <div class="card">
+    <h3>Boina Premium</h3>
+    <p>Alta durabilidade para acabamento profissional</p>
+    <strong>R$ 49,90</strong>
+    <br><br>
+    <button onclick="comprar('Boina Premium')">Comprar</button>
+  </div>
+
+  <div class="card">
+    <h3>Boina Corte Pesado</h3>
+    <p>Remoção de riscos profundos e marcas severas</p>
+    <strong>R$ 59,90</strong>
+    <br><br>
+    <button onclick="comprar('Boina Corte Pesado')">Comprar</button>
+  </div>
+
+  <div class="card">
+    <h3>Kit Profissional</h3>
+    <p>Conjunto completo para polimento automotivo</p>
+    <strong>R$ 139,90</strong>
+    <br><br>
+    <button onclick="comprar('Kit Profissional')">Comprar</button>
+  </div>
+</section>
+
+<div class="pix">
+  <h2>Pagamento via Pix</h2>
+  <p><strong>Telefone:</strong> (16) 98201-4276</p>
+  <p>Após o pagamento, envie o comprovante pelo WhatsApp</p>
+</div>
+
+<footer>
+  <p>📲 Vendas pelo WhatsApp</p>
+  <p><strong>(16) 98201-4276</strong></p>
+</footer>
+
+<script>
+function comprar(produto) {
+  const msg = `Olá! Quero comprar o produto: ${produto} da TecnoBoinas.`;
+  const url = `https://wa.me/5516982014276?text=${encodeURIComponent(msg)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
